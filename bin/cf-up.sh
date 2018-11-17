@@ -2,11 +2,11 @@
 
 set -eux
 
-# download bucc https://github.com/starkandwayne/bucc
-# this file can be embedded in the repo root
+# bucc, you up?
+source bin/bucc-up.sh
 
 # our source code for the Cloud Foundry deployment
-CF_DEPLOYMENT=src/cf-deployment
+CF_DEPLOYMENT=bucc/src/cf-deployment
 
 # if $CF_DEPLOYMENT exists git pull, otherwise git clone to $CF_DEPLOYMENT
 if [[ -d "$CF_DEPLOYMENT" ]]; then
@@ -33,7 +33,7 @@ bosh \
 # https://github.com/cloudfoundry/cf-deployment/blob/master/operations/bosh-lite.yml
 
 bosh -n -d cf deploy $CF_DEPLOYMENT/cf-deployment.yml \
-    --vars-store state/cf-deployment-vars.yml \
+    --vars-store bucc/state/cf-deployment-vars.yml \
     -v "system_domain=sys.10.244.0.34.xip.io" \
     -o $CF_DEPLOYMENT/operations/bosh-lite.yml \
     -o $CF_DEPLOYMENT/operations/use-compiled-releases.yml
@@ -43,7 +43,7 @@ CF_ADMIN_PASSWORD=$(bosh interpolate state/cf-deployment-vars.yml --path /cf_adm
 
 # refresh routes
 sudo route delete 10.244.0.0/16
-bucc routes
+bucc/bin/bucc routes
 
 # login to cf-cli
 cf login --skip-ssl-validation -a https://api.sys.10.244.0.34.xip.io -u admin -p $CF_ADMIN_PASSWORD
