@@ -1,6 +1,6 @@
 # cutlass
 
-![Elegant-Weapon](https://github.com/7hunderbird/cutlass/raw/master/images/elegant-weapon.jpg "'An Elegant Weapon For A More Civilized Time' by Eli Hyder")
+<img src="https://github.com/7hunderbird/cutlass/raw/master/images/elegant-weapon.jpg" width="256" title="Elegant-Weapon" alt="'An Elegant Weapon For A More Civilized Time' by Eli Hyder">
 
 [source](https://www.reddit.com/r/StarWars/comments/4wvqct/an_elegant_weapon_for_a_more_civilized_time_by/)
 
