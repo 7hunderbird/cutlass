@@ -1,0 +1,10 @@
+#!/bin/bash
+
+BOSH_DEPLOYMENT=bosh-deployment
+
+# if $BOSH_DEPLOYMENT exists git pull, otherwise git clone to $BOSH_DEPLOYMENT
+if [[ -d "$BOSH_DEPLOYMENT" ]]; then
+  git submodule update --remote
+else
+  git submodule update --init --recursive
+fi

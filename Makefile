@@ -1,4 +1,7 @@
 bosh:
+		update-bosh create-bosh
+
+create-bosh:
 		bin/create-bosh
 
 delete-bosh:
@@ -6,6 +9,9 @@ delete-bosh:
 
 jumpbox:
 		bin/jumpbox
+
+update-bosh:
+		bin/update-bosh
 
 source:
 		@. state/.envrc
