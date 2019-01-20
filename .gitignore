@@ -1,5 +1,3 @@
-bucc/src/*
-bucc/state/*
 state/state.json
 state/creds.yml
 state/.envrc
