@@ -1,3 +1,4 @@
+.DS_Store
 state/state.json
 state/creds.yml
 state/.envrc
