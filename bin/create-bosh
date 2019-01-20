@@ -1,0 +1,7 @@
+#!/bin/bash
+
+set -eux
+
+pushd state
+
+../bosh-deployment/virtualbox/create-env.sh
