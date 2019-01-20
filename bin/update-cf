@@ -1,0 +1,10 @@
+#!/bin/bash
+
+CF_DEPLOYMENT=cf-deployment
+
+# if $CF_DEPLOYMENT exists git pull, otherwise git clone to $CF_DEPLOYMENT
+if [[ -d "$CF_DEPLOYMENT" ]]; then
+  git submodule update --remote
+else
+  git submodule update --init --recursive
+fi

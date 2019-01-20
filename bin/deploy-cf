@@ -1,0 +1,14 @@
+#!/bin/bash
+
+CF_DEPLOYMENT=../cf-deployment
+
+pushd state
+
+# Uses the 10.244.0.34 ip from cf-deployment bosh-lite.yml operator file
+# https://github.com/cloudfoundry/cf-deployment/blob/master/operations/bosh-lite.yml
+
+bosh -n -d cf deploy $CF_DEPLOYMENT/cf-deployment.yml \
+    --vars-store cf-deployment-vars.yml \
+    -v "system_domain=sys.10.244.0.34.xip.io" \
+    -o $CF_DEPLOYMENT/operations/bosh-lite.yml \
+    -o $CF_DEPLOYMENT/operations/use-compiled-releases.yml

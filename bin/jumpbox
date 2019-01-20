@@ -1,0 +1,5 @@
+#!/bin/bash
+
+bosh int state/creds.yml --path /jumpbox_ssh/private_key > state/jumpbox.key
+chmod 600 state/jumpbox.key
+ssh jumpbox@192.168.50.6 -i state/jumpbox.key
