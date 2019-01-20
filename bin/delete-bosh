@@ -4,6 +4,4 @@ pushd state
 
 ../bosh-deployment/virtualbox/delete-env.sh
 
-rm .envrc creds.yml
-
 popd

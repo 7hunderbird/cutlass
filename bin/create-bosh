@@ -3,3 +3,5 @@
 pushd state
 
 ../bosh-deployment/virtualbox/create-env.sh
+
+popd

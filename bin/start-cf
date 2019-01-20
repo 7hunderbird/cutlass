@@ -12,3 +12,5 @@ cf create-space default -o system
 
 # target default
 cf target -o "system" -s "default"
+
+popd

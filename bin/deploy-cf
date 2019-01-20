@@ -12,3 +12,5 @@ bosh -n -d cf deploy $CF_DEPLOYMENT/cf-deployment.yml \
     -v "system_domain=sys.10.244.0.34.xip.io" \
     -o $CF_DEPLOYMENT/operations/bosh-lite.yml \
     -o $CF_DEPLOYMENT/operations/use-compiled-releases.yml
+
+popd
