@@ -16,9 +16,6 @@ bosh-set-dns:
 jumpbox:
 		bin/bosh-jumpbox
 
-source:
-		@. state/.envrc
-
 cf-create:
 		bin/cf-create
 
