@@ -13,6 +13,9 @@ bosh-clean:
 bosh-set-dns:
 		bin/bosh-set-dns
 
+bosh-resize:
+		bin/bosh-resize
+
 jumpbox:
 		bin/bosh-jumpbox
 
