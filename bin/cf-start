@@ -1,6 +1,6 @@
 #!/bin/bash
 
-push state
+pushd state
 
 CF_ADMIN_PASSWORD=$(bosh interpolate cf-deployment-vars.yml --path /cf_admin_password)
 

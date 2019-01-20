@@ -1,38 +1,35 @@
-bosh:
-		update-bosh create-bosh
+bosh-create:
+		bin/bosh-create
 
-create-bosh:
-		bin/create-bosh
+bosh-update:
+		bin/bosh-update
 
-delete-bosh:
-		bin/delete-bosh
+bosh-delete:
+		bin/bosh-delete
+
+bosh-set-dns:
+		bin/bosh-set-dns
 
 jumpbox:
-		bin/jumpbox
-
-update-bosh:
-		bin/update-bosh
+		bin/bosh-jumpbox
 
 source:
 		@. state/.envrc
 
-set-dns:
-		bin/set-dns
+cf-create:
+		bin/cf-create
 
-update-cf:
-		bin/update-cf
+cf-update:
+		bin/cf-update
 
-set-cc:
-		bin/set-cc
+cf-delete:
+		bin/cf-delete
 
-upload-stemcell:
-		bin/upload-stemcell
+cf-set-cc:
+		bin/cf-set-cc
 
-deploy-cf:
-		bin/deploy-cf
+cf-upload-stemcell:
+		bin/cf-upload-stemcell
 
-start-cf:
-		bin/start-cf
-
-cf:
-		bosh set-dns update-cf set-cc upload-stemcell deploy-cf start-cf
+cf-start:
+		bin/cf-start

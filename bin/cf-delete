@@ -1,0 +1,11 @@
+#!/bin/bash
+
+CF_DEPLOYMENT=../cf-deployment
+
+pushd state
+
+bosh -n -d cf delete-deployment
+
+rm cf-deployment-vars.yml
+
+popd
