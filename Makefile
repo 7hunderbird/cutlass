@@ -7,8 +7,8 @@ bosh-update:
 bosh-delete:
 		bin/bosh-delete
 
-bosh-clean:
-		bin/bosh-clean
+deep-state:
+		bin/deep-state
 
 bosh-set-dns:
 		bin/bosh-set-dns

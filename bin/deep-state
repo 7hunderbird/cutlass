@@ -1,0 +1,4 @@
+#!/bin/bash
+
+[ -f state/.envrc ] && rm state/.envrc  || echo "No .envrc exists."
+[ -f state/* ] && rm state/*  || echo "No other files in state exist."
