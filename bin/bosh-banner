@@ -1,0 +1,5 @@
+#!/bin/bash
+
+# banner smart
+sed -i -e 's/cpus: 6/cpus: 2/g' bosh-deployment/virtualbox/cpi.yml
+rm -rf bosh-deployment/virtualbox/cpi.yml-e

@@ -1,0 +1,4 @@
+#!/bin/bash
+
+# hulk smash!
+sed -i -e 's/cpus: 2/cpus: 6/g' bosh-deployment/virtualbox/cpi.yml

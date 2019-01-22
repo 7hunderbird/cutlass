@@ -13,8 +13,14 @@ bosh-clean:
 bosh-set-dns:
 		bin/bosh-set-dns
 
-bosh-resize:
-		bin/bosh-resize
+bosh-hulk:
+		bin/bosh-hulk
+
+bosh-banner:
+		bin/bosh-banner
+
+bosh-routes:
+		bin/bosh-routes
 
 jumpbox:
 		bin/bosh-jumpbox

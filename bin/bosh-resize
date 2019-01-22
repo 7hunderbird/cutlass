@@ -1,3 +1,0 @@
-#!/bin/bash
-
-sed -i -e 's/cpus: 2/cpus: 8/g' bosh-deployment/virtualbox/cpi.yml
