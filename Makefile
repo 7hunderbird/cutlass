@@ -1,3 +1,5 @@
+bosh: bosh-update deep-state bosh-create
+
 bosh-create:
 		bin/bosh-create
 
@@ -24,6 +26,8 @@ bosh-routes:
 
 jumpbox:
 		bin/bosh-jumpbox
+
+cf: bosh-set-dns cf-update cf-set-cc cf-upload-stemcell cf-create cf-start
 
 cf-create:
 		bin/cf-create
