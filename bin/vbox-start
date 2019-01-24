@@ -1,0 +1,10 @@
+#!/bin/bash
+
+   VM_UUID=$(cat state/state.json | jq -r .current_vm_cid)
+VM_RUNNING=$(VBoXManage list runningvms | grep vm | awk '{print $1}' | tr -d '"')
+
+if [ "$VM_UUID" == "$VM_RUNNING" ]; then
+    echo "BOSH vm is currently running."
+else
+    VBoxManage startvm $VM_UUID --type headless
+fi

@@ -46,3 +46,6 @@ cf-upload-stemcell:
 
 cf-start:
 		bin/cf-start
+
+vbox-start:
+		bin/vbox-start
