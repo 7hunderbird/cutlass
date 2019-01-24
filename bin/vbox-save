@@ -1,0 +1,5 @@
+#!/bin/bash
+
+VM_UUID=$(cat state/state.json | jq -r .current_vm_cid)
+
+VBoxManage controlvm $VM_UUID savestate

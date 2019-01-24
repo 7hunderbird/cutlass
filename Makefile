@@ -49,3 +49,10 @@ cf-start:
 
 vbox-start:
 		bin/vbox-start
+
+vbox-save:
+		bin/vbox-save
+
+start: vbox-start bosh-routes cf-start
+
+stop: vbox-save
