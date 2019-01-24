@@ -1,4 +1,10 @@
+start: vbox-start bosh-routes cf-start
+
+stop: vbox-save
+
 bosh: bosh-update deep-state bosh-create
+
+cf: bosh-set-dns cf-update cf-set-cc cf-upload-stemcell cf-create cf-start
 
 bosh-create:
 		bin/bosh-create
@@ -27,8 +33,6 @@ bosh-routes:
 jumpbox:
 		bin/bosh-jumpbox
 
-cf: bosh-set-dns cf-update cf-set-cc cf-upload-stemcell cf-create cf-start
-
 cf-create:
 		bin/cf-create
 
@@ -53,6 +57,3 @@ vbox-start:
 vbox-save:
 		bin/vbox-save
 
-start: vbox-start bosh-routes cf-start
-
-stop: vbox-save
