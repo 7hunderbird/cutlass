@@ -4,13 +4,10 @@ pushd state
 
 CF_ADMIN_PASSWORD=$(bosh interpolate cf-deployment-vars.yml --path /cf_admin_password)
 
-# login to cf-cli
 cf login --skip-ssl-validation -a https://api.sys.10.244.0.34.xip.io -u admin -p $CF_ADMIN_PASSWORD
 
-# create a target
 cf create-space default -o system
 
-# target default
 cf target -o "system" -s "default"
 
 popd

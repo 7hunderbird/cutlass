@@ -2,5 +2,4 @@
 
 CF_DEPLOYMENT=cf-deployment
 
-# upload cloud config to director
 bosh -n ucc $CF_DEPLOYMENT/iaas-support/bosh-lite/cloud-config.yml

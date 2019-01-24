@@ -2,13 +2,10 @@
 
 CF_DEPLOYMENT=cf-deployment
 
-# *after* the git repo is updated, or version will be inaccurate
 STEMCELL_VERSION=$(bosh interpolate $CF_DEPLOYMENT/cf-deployment.yml --path /stemcells/alias=default/version)
 
-# determine the ubuntu code name
-CODE_NAME=$(bosh interpolate $CF_DEPLOYMENT/cf-deployment.yml --path   /stemcells/0/os)
+CODE_NAME=$(bosh interpolate $CF_DEPLOYMENT/cf-deployment.yml --path /stemcells/0/os)
 
-# upload stemcell to director
 bosh \
   upload-stemcell \
   https://bosh.io/d/stemcells/bosh-warden-boshlite-${CODE_NAME}-go_agent?v=${STEMCELL_VERSION}
