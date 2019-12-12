@@ -5,4 +5,4 @@ state/.envrc
 state/cf-deployment-vars.yml
 state/mysql-creds.yml
 state/jumpbox.key
-src/
+src/*
