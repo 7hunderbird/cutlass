@@ -1,9 +1,0 @@
-#!/bin/bash
-
-CF_DEPLOYMENT=cf-deployment
-
-if [[ -d "$CF_DEPLOYMENT" ]]; then
-  git submodule update --remote
-else
-  git submodule update --init --recursive
-fi

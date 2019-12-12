@@ -1,0 +1,6 @@
+#!/bin/bash
+
+rm -rf bosh-deployment/ cf-deployment/
+git submodule update --init --recursive
+git submodule update --remote
+bosh interpolate cf-deployment/cf-deployment.yml --path /manifest_version

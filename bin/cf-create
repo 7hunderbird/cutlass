@@ -1,5 +1,6 @@
 #!/bin/bash
 
+source state/.envrc
 CF_DEPLOYMENT=../cf-deployment
 
 pushd state
@@ -9,7 +10,7 @@ pushd state
 
 bosh -n -d cf deploy $CF_DEPLOYMENT/cf-deployment.yml \
     --vars-store cf-deployment-vars.yml \
-    -v "system_domain=sys.10.244.0.34.xip.io" \
+    -v "system_domain=sys.10.244.0.34.netip.cc" \
     -o $CF_DEPLOYMENT/operations/bosh-lite.yml \
     -o $CF_DEPLOYMENT/operations/use-compiled-releases.yml
 

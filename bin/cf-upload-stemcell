@@ -1,5 +1,6 @@
 #!/bin/bash
 
+source state/.envrc
 CF_DEPLOYMENT=cf-deployment
 
 STEMCELL_VERSION=$(bosh interpolate $CF_DEPLOYMENT/cf-deployment.yml --path /stemcells/alias=default/version)

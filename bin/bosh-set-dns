@@ -1,5 +1,7 @@
 #!/bin/bash
 
+source state/.envrc
+
 pushd state
 
 bosh -n update-runtime-config ../bosh-deployment/runtime-configs/dns.yml --name dns

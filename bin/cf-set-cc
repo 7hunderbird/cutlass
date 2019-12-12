@@ -1,5 +1,6 @@
 #!/bin/bash
 
+source state/.envrc
 CF_DEPLOYMENT=cf-deployment
 
 bosh -n ucc $CF_DEPLOYMENT/iaas-support/bosh-lite/cloud-config.yml

@@ -1,9 +1,0 @@
-#!/bin/bash
-
-BOSH_DEPLOYMENT=bosh-deployment
-
-if [[ -d "$BOSH_DEPLOYMENT" ]]; then
-  git submodule update --remote
-else
-  git submodule update --init --recursive
-fi

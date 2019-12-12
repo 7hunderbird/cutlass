@@ -1,10 +1,14 @@
 #!/bin/bash
 
+source state/.envrc
+
+sleep 5
+
 pushd state
 
 CF_ADMIN_PASSWORD=$(bosh interpolate cf-deployment-vars.yml --path /cf_admin_password)
 
-cf login --skip-ssl-validation -a https://api.sys.10.244.0.34.xip.io -u admin -p $CF_ADMIN_PASSWORD
+cf login --skip-ssl-validation -a https://api.sys.10.244.0.34.netip.cc -u admin -p $CF_ADMIN_PASSWORD
 
 cf create-space default -o system
 

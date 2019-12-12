@@ -1,4 +1,4 @@
 #!/bin/bash
 
-[ -f state/.envrc ] && rm state/.envrc  || echo "No .envrc exists."
-[ -f state/* ] && rm state/*  || echo "No other files in state exist."
+[ -a state/.envrc ] && rm state/.envrc && echo "Removing state/.envrc file." || echo "No state/.envrc exists."
+[ -a state/cf-deployment-vars.yml ] && rm state/* && echo "Removing any other files in state/ folder." || echo "No files in state folder."

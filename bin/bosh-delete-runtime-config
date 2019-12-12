@@ -1,0 +1,4 @@
+#!/bin/bash
+
+source state/.envrc
+bosh -n delete-config --type runtime --name default
