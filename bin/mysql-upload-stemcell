@@ -1,0 +1,12 @@
+#!/bin/bash
+
+source state/.envrc
+export CF_MYSQL_DEPLOYMENT=src/cf-mysql-deployment
+
+STEMCELL_VERSION=$(bosh interpolate $CF_MYSQL_DEPLOYMENT/cf-mysql-deployment.yml --path /stemcells/alias=default/version)
+
+CODE_NAME=$(bosh interpolate $CF_MYSQL_DEPLOYMENT/cf-mysql-deployment.yml --path /stemcells/0/os)
+
+bosh \
+  upload-stemcell \
+  https://bosh.io/d/stemcells/bosh-warden-boshlite-${CODE_NAME}-go_agent?v=${STEMCELL_VERSION}

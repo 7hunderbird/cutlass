@@ -15,11 +15,6 @@ fi
 export SYSTEM_DOMAIN=sys.10.244.0.34.netip.cc
 export CF_ADMIN_PASSWORD=$(bosh interpolate state/cf-deployment-vars.yml --path /cf_admin_password)
 
-# upload bosh release of cf-mysql-release to director
-# bosh \
-#   upload-release \
-#   https://bosh.io/d/github.com/cloudfoundry/cf-mysql-release
-
 # upload cloud config to director
 bosh -n ucc $CF_MYSQL_DEPLOYMENT/bosh-lite/cloud-config.yml
 

@@ -1,0 +1,9 @@
+#!/bin/bash
+
+source state/.envrc
+export CF_MYSQL_DEPLOYMENT=src/cf-mysql-deployment
+
+# upload bosh release of cf-mysql-release to director
+bosh \
+  upload-release \
+  https://bosh.io/d/github.com/cloudfoundry/cf-mysql-release

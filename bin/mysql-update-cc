@@ -1,0 +1,6 @@
+#!/bin/bash
+
+source state/.envrc
+export CF_MYSQL_DEPLOYMENT=src/cf-mysql-deployment
+
+sed -i -e 's/10.244.7/10.244.16/g ; s/10.244.8/10.244.17/g ; s/10.244.9/10.244.18/g' $CF_MYSQL_DEPLOYMENT/bosh-lite/cloud-config.yml

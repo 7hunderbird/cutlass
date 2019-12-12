@@ -1,4 +1,4 @@
 #!/bin/bash
 
 # hulk smash!
-sed -i -e 's/cpus: 2/cpus: 6/g' bosh-deployment/virtualbox/cpi.yml
+sed -i -e 's/cpus: 4/cpus: 6/g ; s/ephemeral_disk: 16384/ephemeral_disk: 40960/g ; s/memory: 6144/memory: 10240/g' bosh-deployment/virtualbox/cpi.yml

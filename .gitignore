@@ -3,4 +3,5 @@ state/state.json
 state/creds.yml
 state/.envrc
 state/cf-deployment-vars.yml
+state/mysql-creds.yml
 state/jumpbox.key
