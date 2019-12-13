@@ -4,7 +4,7 @@ stop: vbox-save
 
 down: bosh-delete deep-state
 
-bosh: update deep-state bosh-hulk bosh-create bosh-set-dns bosh-delete-rc bosh-routes
+bosh: update deep-state size-superman bosh-create bosh-set-dns bosh-delete-rc bosh-routes
 
 cf: cf-set-cc cf-upload-stemcell cf-create cf-start
 
@@ -21,12 +21,6 @@ bosh-delete-rc:
 
 bosh-set-dns:
 	bin/bosh-set-dns
-
-bosh-hulk:
-	bin/bosh-hulk
-
-bosh-banner:
-	bin/bosh-banner
 
 bosh-routes:
 	bin/bosh-routes
@@ -49,6 +43,15 @@ cf-upload-stemcell:
 cf-start:
 	bin/cf-start
 
+deep-state:
+	bin/deep-state
+
+size-superman:
+	bin/size-superman
+
+size-clark:
+	bin/size-clark
+
 update:
 	bin/update
 
@@ -57,6 +60,3 @@ vbox-start:
 
 vbox-save:
 	bin/vbox-save
-
-deep-state:
-	bin/deep-state
