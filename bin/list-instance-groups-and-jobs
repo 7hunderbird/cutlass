@@ -1,0 +1,7 @@
+#!/bin/bash
+
+source state/.envrc
+
+BOSH_DEPLOYMENT=cf
+
+bosh vms --json | jq -r ".Tables[].Rows[].instance" | xargs -n 1 bosh ssh -c "sudo monit summary"

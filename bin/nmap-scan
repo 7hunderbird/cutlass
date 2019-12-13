@@ -1,0 +1,8 @@
+#!/bin/bash
+
+ips=$(bosh vms -d cf --json | jq -r '.Tables[].Rows[].ips')
+
+for ip in $ips
+do
+    nmap $ip
+done
